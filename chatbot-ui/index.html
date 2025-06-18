@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <style>
+        #chatWindow { border: 1px solid #ccc; padding: 10px; width: 400px; height: 300px; overflow-y: auto; }
+        .bot-response { color: blue; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div id="chatWindow">
+        <div class="bot-response">Hello! How can I help you today?</div>
+    </div>
+    <input type="text" id="userInput" />
+    <button id="sendButton">Send</button>
+    <script>
+        document.getElementById('sendButton').onclick = function() {
+            const input = document.getElementById('userInput').value;
+            let response = '';
+            if (input.includes('appointment')) {
+                response = 'Sure, who would you like to see?, Intent Book_Appointment';
+            } else {
+                response = "I'm sorry, can you please clarify?";
+            }
+            const div = document.createElement('div');
+            div.className = 'bot-response';
+            div.innerText = response;
+            document.getElementById('chatWindow').appendChild(div);
+        };
+    </script>
+</body>
+</html>
