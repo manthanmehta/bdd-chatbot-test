@@ -119,7 +119,7 @@ if (driver == null) {
 }
 ```
 
-### 🧪 3. Run tests pointing to the grid
+### 3. Run tests pointing to the grid
 
 No additional change needed—your Selenium will now execute inside Dockerized grid browsers.
 
